@@ -18,7 +18,7 @@ const Resume  = lazy(() => import('./pages/Resume'));
 function App() {
 	return (
 		<AnimatePresence>
-			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
+			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300 h-[100vh] overflow-y-auto">
 				<Router>
 					<ScrollToTop />
 					<AppHeader />

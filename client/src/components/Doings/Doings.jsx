@@ -8,7 +8,7 @@ const Doings = () => {
     return (
         <section className="service text-primary-dark dark:text-ternary-light">
 
-            <h3 className="h3 service-title text-3xl font-semibold text-center">What i'm doing</h3>
+            <h3 className="h3 service-title font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light text-center">What i'm doing</h3>
 
             <ul className="service-list mt-[3rem]">
 
@@ -19,7 +19,7 @@ const Doings = () => {
                     </div>
 
                     <div className="service-content-box !text-start">
-                        <h4 className="h4 service-item-title font-semibold text-xl">Web development</h4>
+                        <h4 className="h4 service-item-title font-semibold text-xl text-ternary-dark dark:text-ternary-light">Web development</h4>
 
                         <p className="service-item-text text-lg font-medium">
                             High-quality development of sites at the professional level.
@@ -35,7 +35,7 @@ const Doings = () => {
                     </div>
 
                     <div className="service-content-box !text-start">
-                        <h4 className="h4 service-item-title font-semibold text-xl">Mobile apps</h4>
+                        <h4 className="h4 service-item-title font-semibold text-xl text-ternary-dark dark:text-ternary-light">Mobile apps</h4>
 
                         <p className="service-item-text text-lg font-medium">
                             Professional development of applications for iOS and Android.
@@ -51,7 +51,7 @@ const Doings = () => {
                     </div>
 
                     <div className="service-content-box !text-start">
-                        <h4 className="h4 service-item-title font-semibold text-xl">Web design</h4>
+                        <h4 className="h4 service-item-title font-semibold text-xl text-ternary-dark dark:text-ternary-light">Web design</h4>
 
                         <p className="service-item-text text-lg font-medium">
                             The most modern and high-quality design made at a professional level.
@@ -67,7 +67,7 @@ const Doings = () => {
                     </div>
 
                     <div className="service-content-box !text-start">
-                        <h4 className="h4 service-item-title font-semibold text-xl">Embeded systems</h4>
+                        <h4 className="h4 service-item-title font-semibold text-xl text-ternary-dark dark:text-ternary-light">Embeded systems</h4>
 
                         <p className="service-item-text text-lg font-medium">
                             Unlock endless tech opportunities by learning embedded systems design and development.

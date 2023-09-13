@@ -19,13 +19,14 @@ const Testimonials = () => {
         sliderRef.current.swiper.slideNext();
     }, []);
 
+
     return (
         <>
-            <section className="pt-20 pb-20 lg:pt-[120px] lg:pb-[120px] relative">
+            <section className="pt-5 pb-5 lg:pt-[12px] lg:pb-[12px] relative my-10">
                 <section>
-                    What Our Client Said
+                <h4 className="mb-8 font-general-medium text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light text-center">Testimonials</h4>
                 </section>
-                <div className="absolute z-50 top-[-75%] right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0">
+                <div className="absolute z-50 top-[-85%] right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0">
                     <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
                         <button className="text-primary hover:bg-blue-500 shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 transition-all hover:text-white">
                             <svg
