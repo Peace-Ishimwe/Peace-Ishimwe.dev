@@ -4,6 +4,7 @@ import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
 import Doings from '../components/Doings/Doings';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 const Home = () => {
 	return (
@@ -25,6 +26,9 @@ const Home = () => {
 					<Button title="More Projects" />
 				</Link>
 			</div>
+
+			<Testimonials />
+
 		</div>
 	);
 };

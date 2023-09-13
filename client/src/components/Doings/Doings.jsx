@@ -1,4 +1,8 @@
 import React from 'react'
+import IconWeb from '../../images/Doings/icon-dev.svg'
+import IconApp from '../../images/Doings/icon-app.svg'
+import IconDesign from '../../images/Doings/icon-design.svg'
+import IconEmbeded from '../../images/Doings/icon-photo.svg'
 
 const Doings = () => {
     return (
@@ -6,67 +10,66 @@ const Doings = () => {
 
             <h3 className="h3 service-title text-3xl font-semibold text-center">What i'm doing</h3>
 
-            <ul className="service-list">
+            <ul className="service-list mt-[3rem]">
 
-                <li className="service-item">
+                <li className="service-item bg-secondary-light dark:bg-ternary-dark !shadow-lg hover:!shadow-xl flex gap-[2rem]">
 
                     <div className="service-icon-box">
-                        {/* <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40"> */}
+                        <img src={IconWeb} alt="Web development icon" width="40" className='min-w-[40px]' />
                     </div>
 
-                    <div className="service-content-box">
-                        <h4 className="h4 service-item-title">Web development</h4>
+                    <div className="service-content-box !text-start">
+                        <h4 className="h4 service-item-title font-semibold text-xl">Web development</h4>
 
-                        <p className="service-item-text">
+                        <p className="service-item-text text-lg font-medium">
                             High-quality development of sites at the professional level.
                         </p>
                     </div>
 
                 </li>
 
-                <li className="service-item">
+                <li className="service-item bg-secondary-light dark:bg-ternary-dark !shadow-lg hover:!shadow-xl flex gap-[2rem]">
 
                     <div className="service-icon-box">
-                        {/* <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40"> */}
+                        <img src={IconApp} alt="mobile app icon" width="40" className='min-w-[40px]' />
                     </div>
 
-                    <div className="service-content-box">
-                        <h4 className="h4 service-item-title">Mobile apps</h4>
+                    <div className="service-content-box !text-start">
+                        <h4 className="h4 service-item-title font-semibold text-xl">Mobile apps</h4>
 
-                        <p className="service-item-text">
+                        <p className="service-item-text text-lg font-medium">
                             Professional development of applications for iOS and Android.
                         </p>
                     </div>
 
                 </li>
 
-                <li className="service-item">
+                <li className="service-item bg-secondary-light dark:bg-ternary-dark !shadow-lg hover:!shadow-xl flex gap-[2rem]">
 
                     <div className="service-icon-box">
-                        {/* <img src="./assets/images/icon-design.svg
-          " alt="design icon" width="40"> */}
+                        <img src={IconDesign} alt="design icon" width="40" className='min-w-[40px]' />
                     </div>
 
-                    <div className="service-content-box">
-                        <h4 className="h4 service-item-title">Web design</h4>
+                    <div className="service-content-box !text-start">
+                        <h4 className="h4 service-item-title font-semibold text-xl">Web design</h4>
 
-                        <p className="service-item-text">
+                        <p className="service-item-text text-lg font-medium">
                             The most modern and high-quality design made at a professional level.
                         </p>
                     </div>
 
                 </li>
 
-                <li className="service-item">
+                <li className="service-item bg-secondary-light dark:bg-ternary-dark !shadow-lg hover:!shadow-xl flex gap-[2rem]">
 
                     <div className="service-icon-box">
-                        {/* <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40" /> */}
+                        <img src={IconEmbeded} alt="camera icon" width="40" className='min-w-[40px]' />
                     </div>
 
-                    <div className="service-content-box" >
-                        <h4 className="h4 service-item-title">Embeded systems</h4>
+                    <div className="service-content-box !text-start">
+                        <h4 className="h4 service-item-title font-semibold text-xl">Embeded systems</h4>
 
-                        <p className="service-item-text">
+                        <p className="service-item-text text-lg font-medium">
                             Unlock endless tech opportunities by learning embedded systems design and development.
                         </p>
                     </div>
