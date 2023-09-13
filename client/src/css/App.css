@@ -1,8 +1,3 @@
-/*== 
- * React & TailwindCSS Portfolio Main CSS File
- * Powered by: @realstoman
-*/
-
 body {
 	font-family: 'GeneralSans-Variable';
 }
@@ -232,3 +227,65 @@ body {
 		opacity: 0.5;
 	}
 }
+
+::-webkit-scrollbar {
+	/* background-color: none !important;
+	width: 15px; */
+	display: none !important;
+  }
+  
+  /* ::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #f1f1f1;
+	box-shadow: inset 0 0 5px grey; 
+	border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: rgba(21, 32, 56, 0.82);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+	background: rgba(21, 32, 56, 0.92);
+  } */
+
+  
+  .service-item {
+	position: relative;
+	padding: 20px;
+	border-radius: 14px;
+	box-shadow: var(--shadow-2);
+	z-index: 1;
+  }
+  
+  .service-item::before {
+	content: "";
+	position: absolute;
+	inset: 1px;
+	border-radius: inherit;
+	z-index: -1;
+  }
+  
+  .service-icon-box { margin-bottom: 10px; }
+  
+  .service-icon-box img { margin: auto; }
+  
+  .service-content-box { text-align: center; }
+  
+  .service-item-title { margin-bottom: 7px; }
+  
+  .service-item-text {
+	color: var(--light-gray);
+	font-size: var(--fs-6);
+	font-weight: var(--fw-3);
+	line-height: 1.6;
+  }
+
+  
+  .service-list {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+  }
+
+
+  
