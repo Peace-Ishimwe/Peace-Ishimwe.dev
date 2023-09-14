@@ -1,25 +1,71 @@
-import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
+import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import CircularProgress from '@mui/material/CircularProgress';
+import { ToastContainer, toast } from "react-toastify";
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 const ContactForm = () => {
+
+	const [activeTheme, setTheme] = useThemeSwitcher();
+	const [toastTheme, setToastTheme] = useState("light");
+	console.log(toastTheme);
+	useEffect(() => {
+
+		if (activeTheme === 'light') {
+			setToastTheme('dark');
+		} else {
+			setToastTheme('light');
+		}
+
+	}, [activeTheme])
+
+	const [isLoading, setIsLoading] = useState(false);
+
+	const onError = (error) =>
+		toast.error(error, {
+			position: "top-center",
+		});
+
+	const onSuccess = (success) =>
+		toast.success(success, {
+			position: "top-center",
+		});
+
+	const form = useRef()
+	const sendEmail = (e) => {
+		e.preventDefault();
+		setIsLoading(true);
+		emailjs.sendForm('service_4l7kxq7', 'template_len7agm', form.current, 'dQ5I1i5gTw22cXzt1')
+			.then((result) => {
+				console.log(result.text);
+				setIsLoading(false);
+				onSuccess("Message sent to Peace Successfully");
+				e.target.reset()
+			}, (error) => {
+				console.log(error.text);
+				setIsLoading(false);
+				onError("Message not sent")
+			});
+	};
+
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					onSubmit={sendEmail}
+					ref={form}
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>
 					<p className="font-general-medium text-primary-dark dark:text-primary-light text-2xl mb-8">
-						Contact Form
+						Connect With Peace Ishimwe 🙋
 					</p>
 					<FormInput
 						inputLabel="Full Name"
 						labelFor="name"
 						inputType="text"
 						inputId="name"
-						inputName="name"
+						inputName="user_name"
 						placeholderText="Your Name"
 						ariaLabelName="Name"
 					/>
@@ -28,7 +74,7 @@ const ContactForm = () => {
 						labelFor="email"
 						inputType="email"
 						inputId="email"
-						inputName="email"
+						inputName="user_email"
 						placeholderText="Your email"
 						ariaLabelName="Email"
 					/>
@@ -59,15 +105,13 @@ const ContactForm = () => {
 						></textarea>
 					</div>
 
-					<div className="font-general-medium w-40 px-4 py-2.5 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
-						<Button
-							title="Send Message"
-							type="submit"
-							aria-label="Send Message"
-						/>
+					<div className="font-general-medium flex items-center justify-center min-w-fit w-40 px-4 py-2.5 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
+						{!isLoading && <button type='submit'>Send Message</button>}
+						{isLoading && <CircularProgress color='inherit' size={'1.5rem'} />}
 					</div>
 				</form>
 			</div>
+			<ToastContainer theme={"light"} />
 		</div>
 	);
 };
