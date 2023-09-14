@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useRef, useEffect, useState } from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -19,12 +19,30 @@ const Testimonials = () => {
         sliderRef.current.swiper.slideNext();
     }, []);
 
+    const [slidesPerView, setSlidesPerView] = useState(3)
+
+    useEffect(() => {
+        const updateSlidesPerView = () => {
+            if (window.innerWidth >= 1024) {
+                setSlidesPerView(3); // Large screens
+            } else if (window.innerWidth >= 768) {
+                setSlidesPerView(2); // Medium screens
+            } else {
+                setSlidesPerView(1); // Small screens
+            }
+        };
+        updateSlidesPerView();
+        window.addEventListener("resize", updateSlidesPerView);
+        return () => {
+            window.removeEventListener('resize', updateSlidesPerView);
+        };
+    }, [slidesPerView]);
 
     return (
         <>
             <section className="pt-5 pb-5 lg:pt-[12px] lg:pb-[12px] relative my-10">
                 <section>
-                <h4 className="mb-8 font-general-medium text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light text-center">Testimonials</h4>
+                    <h4 className="mb-8 font-general-medium text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light text-center">Testimonials</h4>
                 </section>
                 <div className="absolute z-50 top-[-85%] right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0">
                     <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
@@ -63,7 +81,7 @@ const Testimonials = () => {
                 <Swiper
                     modules={[Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
-                    slidesPerView={3}
+                    slidesPerView={slidesPerView}
                     pagination={{ clickable: true }}
                     ref={sliderRef}
                 >
@@ -148,7 +166,7 @@ export default Testimonials;
 
 const SingleTestimonial = ({ image, reviewAlt, details, name, position }) => {
     return (
-        <div className="max-w-sm w-full lg:max-w-full rounded-lg overflow-hidden  lg:flex dark:bg-ternary-dark bg-white shadow-lg hover:shadow-xl">
+        <div className="md:max-w-sm w-full lg:max-w-full rounded-lg overflow-hidden  lg:flex dark:bg-ternary-dark bg-white shadow-lg hover:shadow-xl">
             <div className=" border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div className="flex items-center">
                     <img className="w-12 h-12 rounded-full mr-4" src={image} alt="Avatar of Jonathan Reinink" />
