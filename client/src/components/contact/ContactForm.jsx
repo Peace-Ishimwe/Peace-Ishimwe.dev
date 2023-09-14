@@ -1,27 +1,11 @@
 import FormInput from '../reusable/FormInput';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import CircularProgress from '@mui/material/CircularProgress';
 import { ToastContainer, toast } from "react-toastify";
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 const ContactForm = () => {
-
-	const [activeTheme, setTheme] = useThemeSwitcher();
-	const [toastTheme, setToastTheme] = useState("light");
-	console.log(toastTheme);
-	useEffect(() => {
-
-		if (activeTheme === 'light') {
-			setToastTheme('dark');
-		} else {
-			setToastTheme('light');
-		}
-
-	}, [activeTheme])
-
 	const [isLoading, setIsLoading] = useState(false);
-
 	const onError = (error) =>
 		toast.error(error, {
 			position: "top-center",
