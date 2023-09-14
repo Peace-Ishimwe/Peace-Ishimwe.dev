@@ -1,185 +1,133 @@
 import React, { useCallback, useRef, useEffect, useState } from "react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import { Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import SingleTestimonial from "./SingleTestimonial";
 
 const Testimonials = () => {
-    const sliderRef = useRef(null);
-    const handlePrev = useCallback(() => {
-        if (!sliderRef.current) return;
-        sliderRef.current.swiper.slidePrev();
-    }, []);
+  const sliderRef = useRef(null);
 
-    const handleNext = useCallback(() => {
-        if (!sliderRef.current) return;
-        sliderRef.current.swiper.slideNext();
-    }, []);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
 
-    const [slidesPerView, setSlidesPerView] = useState(3)
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
 
-    useEffect(() => {
-        const updateSlidesPerView = () => {
-            if (window.innerWidth >= 1024) {
-                setSlidesPerView(3); // Large screens
-            } else if (window.innerWidth >= 768) {
-                setSlidesPerView(2); // Medium screens
-            } else {
-                setSlidesPerView(1); // Small screens
-            }
-        };
-        updateSlidesPerView();
-        window.addEventListener("resize", updateSlidesPerView);
-        return () => {
-            window.removeEventListener('resize', updateSlidesPerView);
-        };
-    }, [slidesPerView]);
+  const [slidesPerView, setSlidesPerView] = useState(3);
 
-    return (
-        <>
-            <section className="pt-5 pb-5 lg:pt-[12px] lg:pb-[12px] relative my-10">
-                <section>
-                    <h4 className="mb-8 font-general-medium text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light text-center">Testimonials</h4>
-                </section>
-                <div className="absolute z-50 top-[-85%] right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0">
-                    <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
-                        <button className="text-primary hover:bg-blue-500 shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 transition-all hover:text-white">
-                            <svg
-                                width="15"
-                                height="13"
-                                viewBox="0 0 15 13"
-                                className="fill-current"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M5.24264 11.8033L0.46967 7.03037C0.176777 6.73748 0.176777 6.2626 0.46967 5.96971L5.24264 1.19674C5.53553 0.903845 6.01041 0.903845 6.3033 1.19674C6.59619 1.48963 6.59619 1.96451 6.3033 2.2574L2.81066 5.75004H14C14.4142 5.75004 14.75 6.08583 14.75 6.50004C14.75 6.91425 14.4142 7.25004 14 7.25004H2.81066L6.3033 10.7427C6.59619 11.0356 6.59619 11.5104 6.3033 11.8033C6.01041 12.0962 5.53553 12.0962 5.24264 11.8033Z"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className="next-arrow cursor-pointer" onClick={handleNext}>
-                        <button className="text-primary hover:bg-blue-500 shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 transition-all hover:text-white">
-                            <svg
-                                width="15"
-                                height="13"
-                                viewBox="0 0 15 13"
-                                className="fill-current"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M9.75736 11.8033L14.5303 7.03037C14.8232 6.73748 14.8232 6.2626 14.5303 5.96971L9.75736 1.19674C9.46447 0.903845 8.98959 0.903845 8.6967 1.19674C8.40381 1.48963 8.40381 1.96451 8.6967 2.2574L12.1893 5.75004H1C0.585786 5.75004 0.25 6.08583 0.25 6.50004C0.25 6.91425 0.585786 7.25004 1 7.25004H12.1893L8.6967 10.7427C8.40381 11.0356 8.40381 11.5104 8.6967 11.8033C8.98959 12.0962 9.46447 12.0962 9.75736 11.8033Z"
-                                ></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <Swiper
-                    modules={[Pagination, Scrollbar, A11y]}
-                    spaceBetween={50}
-                    slidesPerView={slidesPerView}
-                    pagination={{ clickable: true }}
-                    ref={sliderRef}
-                >
-                    <SwiperSlide className="pb-[4rem]">
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
+  useEffect(() => {
+    const updateSlidesPerView = () => {
+      if (window.innerWidth >= 1024) {
+        setSlidesPerView(3); // Large screens
+      } else if (window.innerWidth >= 768) {
+        setSlidesPerView(2); // Medium screens
+      } else {
+        setSlidesPerView(1); // Small screens
+      }
+    };
+    updateSlidesPerView();
+    window.addEventListener("resize", updateSlidesPerView);
+    return () => {
+      window.removeEventListener("resize", updateSlidesPerView);
+    };
+  }, [slidesPerView]);
 
-                    <SwiperSlide>
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <SingleTestimonial
-                            image="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg"
-                            reviewImg="https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/lineicon.svg"
-                            reviewAlt="lineicon"
-                            details="Velit est sit voluptas eum sapiente omnis! Porro, impedit minus quam reprehenderit tempore sint quaerat id! Mollitia perspiciatis est asperiores commodi labore!"
-                            name="Larry Diamond"
-                            position="Chief Executive Officer."
-                        />
-                    </SwiperSlide>
-                </Swiper>
-            </section>
-        </>
-    );
+  const testimonials = [
+    {
+      image: "https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg",
+      reviewAlt: "Exceptional Service",
+      details:
+        "I had a fantastic experience working with this team. They exceeded my expectations in every way. Highly recommended!",
+      name: "Alice Johnson",
+      position: "Marketing Manager",
+      rating: 5,
+    },
+    {
+      image: "https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-02/image-01.jpg",
+      reviewAlt: "Great Company",
+      details:
+        "This company is top-notch. Their professionalism and dedication to their clients are truly remarkable. I'm a satisfied customer!",
+      name: "Bob Smith",
+      position: "CEO",
+      rating: 4,
+    },
+    {
+      image: "https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-05/image-01.jpg",
+      reviewAlt: "Impressive Work",
+      details:
+        "I was impressed by the quality of their work. They delivered on time and with exceptional attention to detail. Great job!",
+      name: "Emma Davis",
+      position: "Product Manager",
+      rating: 5,
+    },
+    {
+      image: "https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-01/image-01.jpg",
+      reviewAlt: "Outstanding Team",
+      details:
+        "Working with this team was a pleasure. Their creativity and expertise were evident throughout the project. I'm grateful for their support!",
+      name: "John Williams",
+      position: "Creative Director",
+      rating: 5,
+    },
+    {
+      image: "https://cdn.tailgrids.com/2.0/image/marketing/images/testimonials/testimonial-05/image-01.jpg",
+      reviewAlt: "Highly Recommended",
+      details:
+        "I highly recommend their services. They have a talented team that goes above and beyond to meet client needs. You won't be disappointed!",
+      name: "Sophia Martinez",
+      position: "COO",
+      rating: 4,
+    },
+  ];
+
+  return (
+    <>
+      <section className="pt-5 pb-5 lg:pt-[12px] lg:pb-[12px] relative my-10">
+        <section>
+          <h4 className="mb-8 font-general-medium text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light text-center">
+            Testimonials
+          </h4>
+        </section>
+        <div className="absolute z-50 top-[-85%] right-0 bottom-0 flex items-center justify-center lg:pl-[120px] 2xl:pl-0">
+          <div className="prev-arrow cursor-pointer" onClick={handlePrev}>
+            <button className="text-primary hover:bg-blue-500 shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 transition-all hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M15.41 7.41l-4.83 4.83 4.83 4.83L14 18l-6-6 6-6 1.41 1.41z" />
+              </svg>
+            </button>
+          </div>
+          <div className="next-arrow cursor-pointer" onClick={handleNext}>
+            <button className="text-primary hover:bg-blue-500 shadow-input mx-1 flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 transition-all hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5"viewBox="0 0 24 24">
+                <path d="M10.59 16.41l4.83-4.83-4.83-4.83L12 6l6 6-6 6-1.41-1.41z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <Swiper
+          modules={[Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={slidesPerView}
+          pagination={{ clickable: true }}
+          ref={sliderRef}
+        >
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index} className="pb-[4rem]">
+              <SingleTestimonial {...testimonial} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+    </>
+  );
 };
 
 export default Testimonials;
-
-const SingleTestimonial = ({ image, reviewAlt, details, name, position }) => {
-    return (
-        <div className="md:max-w-sm w-full lg:max-w-full rounded-lg overflow-hidden  lg:flex dark:bg-ternary-dark bg-white shadow-lg hover:shadow-xl">
-            <div className=" border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                <div className="flex items-center">
-                    <img className="w-12 h-12 rounded-full mr-4" src={image} alt="Avatar of Jonathan Reinink" />
-                    <div className="text-sm">
-                        <p className="text-gray-900 dark:text-gray-200 leading-none text-base font-semibold">{name}</p>
-                        <p className="text-gray-600 dark:text-gray-400 font-medium">{position}</p>
-                    </div>
-                </div>
-                <div className="mb-8 mt-2">
-                    <div className="text-gray-900 dark:text-gray-200 font-bold text-xl mb-2">{reviewAlt}</div>
-                    <p className="text-gray-700 dark:text-gray-300 text-base">{details}</p>
-                </div>
-            </div>
-        </div>
-    );
-};
