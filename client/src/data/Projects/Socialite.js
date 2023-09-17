@@ -2,8 +2,7 @@ import Italos from '../../images/Italos/Italos.png'
 import socialite1 from '../../images/Socialite/socialite1.png'
 import socialite2 from '../../images/Socialite/socialite2.png'
 import socialite3 from '../../images/Socialite/socialite3.png'
-
-import { FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FacebookIcon , FacebookShareButton , TwitterIcon , TwitterShareButton , WhatsappIcon , WhatsappShareButton , LinkedinIcon , LinkedinShareButton , MailruIcon , MailruShareButton } from 'react-share'
 
 export const Socialite = 	{
     ProjectHeader: {
@@ -88,38 +87,78 @@ export const Socialite = 	{
             }
         ],
         SocialSharingHeading: 'Share This',
-        SocialSharing: [
+        SocialSharing : [
             {
-                id: 1,
-                name: 'Twitter',
-                icon: <FiTwitter />,
-                url: 'https://twitter.com/Peace_Ishimwem',
+              id: 1,
+              name: 'Twitter',
+              shareButton: (
+                <TwitterShareButton
+                  url='https://peace-ishimwe.vercel.app/projects/single-project/0'
+                  quote={"Peace Ishimwe's portfolio"}
+                  hashtag={'#portfolio...'}
+                >
+                  <TwitterIcon size={40} round={true} />
+                </TwitterShareButton>
+              ),
+              url: 'https://peace-ishimwe.vercel.app/projects/single-project/0',
             },
             {
-                id: 2,
-                name: 'Instagram',
-                icon: <FiInstagram />,
-                url: 'https://www.instagram.com/peace_ishimwem/',
+              id: 2,
+              name: 'Mail',
+              shareButton: (
+                <MailruShareButton
+                  url='https://peace-ishimwe.vercel.app/projects/single-project/0'
+                  quote={"Peace Ishimwe's portfolio"}
+                  hashtag={'#portfolio...'}
+                >
+                  <MailruIcon size={40} round={true} />
+                </MailruShareButton>
+              ),
+              url: 'https://peace-ishimwe.vercel.app/projects/single-project/0',
             },
             {
-                id: 3,
-                name: 'Facebook',
-                icon: <FiFacebook />,
-                url: 'https://web.facebook.com/peace.ishimwem/',
+              id: 3,
+              name: 'Facebook',
+              shareButton: (
+                <FacebookShareButton
+                  url='https://peace-ishimwe.vercel.app/projects/single-project/0'
+                  quote={"Peace Ishimwe's portfolio"}
+                  hashtag={'#portfolio...'}
+                >
+                  <FacebookIcon size={40} round={true} />
+                </FacebookShareButton>
+              ),
+              url: 'https://peace-ishimwe.vercel.app/projects/single-project/0',
             },
             {
-                id: 4,
-                name: 'LinkedIn',
-                icon: <FiLinkedin />,
-                url: 'https://www.linkedin.com/in/peace-ishimwe/',
+              id: 4,
+              name: 'LinkedIn',
+              shareButton: (
+                <LinkedinShareButton
+                  url='https://peace-ishimwe.vercel.app/projects/single-project/0'
+                  quote={"Peace Ishimwe's portfolio"}
+                  hashtag={'#portfolio...'}
+                >
+                  <LinkedinIcon size={40} round={true} />
+                </LinkedinShareButton>
+              ),
+              url: 'https://peace-ishimwe.vercel.app/projects/single-project/0',
             },
             {
-                id: 5,
-                name: 'Github',
-                icon: <FiGithub />,
-                url: 'https://github.com/Peace-Ishimwe',
+              id: 5,
+              name: 'Whatsapp',
+              shareButton: (
+                <WhatsappShareButton
+                  url='https://peace-ishimwe.vercel.app/projects/single-project/0'
+                  quote={"Peace Ishimwe's portfolio"}
+                  hashtag={'#portfolio...'}
+                >
+                  <WhatsappIcon size={40} round={true} />
+                </WhatsappShareButton>
+              ),
+              url: 'https://peace-ishimwe.vercel.app/projects/single-project/0',
             },
-        ],
+          ]
     },
     RelatedProject: {
         title: 'Related Projects',

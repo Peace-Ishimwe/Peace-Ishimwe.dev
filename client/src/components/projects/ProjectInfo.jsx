@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
 import { useParams } from 'react-router-dom';
 
+
 const ProjectInfo = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
 	const { id } = useParams();
@@ -29,7 +30,7 @@ const ProjectInfo = () => {
 											target='___blank'
 											className={
 												info.title === 'Website' ||
-												info.title === 'Phone'
+													info.title === 'Phone'
 													? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
 													: ''
 											}
@@ -75,20 +76,13 @@ const ProjectInfo = () => {
 						{data.ProjectInfo.SocialSharing.map(
 							(social) => {
 								return (
-									<a
-										key={social.id}
-										href={social.url}
-										target="__blank"
-										aria-label="Share Project"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-									>
-										<span className="text-lg lg:text-2xl">
-											{social.icon}
-										</span>
-									</a>
+									<div>
+										{social.shareButton }
+									</div>
 								);
 							}
 						)}
+
 					</div>
 				</div>
 			</div>
