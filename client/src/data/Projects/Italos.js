@@ -1,10 +1,8 @@
-import Image1 from '../../images/ui-project-1.jpg';
-import Image2 from '../../images/web-project-2.jpg';
-import Image3 from '../../images/mobile-project-2.jpg';
-import Image4 from '../../images/mobile-project-1.jpg';
-import Image5 from '../../images/web-project-1.jpg';
-import Image6 from '../../images/ui-project-2.jpg';
 import { FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import Socialite from '../../images/Socialite/Socialite.jpg'
+import italos1 from '../../images/Italos/italos1.png'
+import italos2 from '../../images/Italos/italos2.png'
+import italos3 from '../../images/Italos/italos3.png'
 
 export const Italos = {
     ProjectHeader: {
@@ -15,18 +13,18 @@ export const Italos = {
     ProjectImages: [
         {
             id: 1,
-            title: 'Kabul Project Management UI',
-            img: Image1,
+            title: 'Italos data management',
+            img: italos1,
         },
         {
             id: 2,
-            title: 'Kabul Project Management UI',
-            img: Image2,
+            title: 'Italos data management',
+            img: italos2,
         },
         {
             id: 3,
-            title: 'Kabul Project Management UI',
-            img: Image3,
+            title: 'Italos data management',
+            img: italos3,
         },
     ],
     ProjectInfo: {
@@ -35,17 +33,17 @@ export const Italos = {
             {
                 id: 1,
                 title: 'Name',
-                details: 'Socialite Ltd',
+                details: 'Italos data management',
             },
             {
                 id: 2,
                 title: 'Services',
-                details: 'UI Design & Frontend Development',
+                details: 'Frontend Development',
             },
             {
                 id: 3,
                 title: 'Website',
-                details: 'https://socialiteinc.vercel.app/',
+                details: 'https://t-tas.italos.cloud/',
             },
             {
                 id: 4,
@@ -54,44 +52,40 @@ export const Italos = {
             },
         ],
         ObjectivesHeading: 'Objective',
-        ObjectivesDetails:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+        ObjectivesDetails : 'Efficient data management is essential for a seamless user experience. In this context, we focus on optimizing data handling and manipulation, ensuring that information is readily available and up-to-date for various application functionalities.',
         Technologies: [
             {
                 title: 'Tools & Technologies',
                 techs: [
-                    'HTML',
-                    'CSS',
-                    'JavaScript',
-                    'Vue.js',
-                    'TailwindCSS',
-                    'AdobeXD',
-                ],
+                    'React js',
+                    'Bootstrap Framework',
+                    'Material UI',
+                ]
             },
         ],
         ProjectDetailsHeading: 'Challenge',
-        ProjectDetails: [
+        ProjectDetails : [
             {
                 id: 1,
                 details:
-                    'Prop ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+                    'Effective data management is crucial for modern applications. It involves organizing, storing, and retrieving data efficiently. Additionally, data visualization through charts is key to gaining insights from data. Our project aims to implement robust data management practices and incorporate interactive charts for data analysis.',
             },
             {
                 id: 2,
                 details:
-                    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+                    'In the era of big data, managing information effectively is a challenge. Our project addresses this by providing tools for data storage and retrieval. Moreover, we focus on presenting data in an understandable manner with the help of dynamic charts that offer visual representations of complex datasets.',
             },
             {
                 id: 3,
                 details:
-                    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+                    'Data is the lifeblood of modern applications. Our project centers on managing data efficiently and making it accessible when needed. We understand the importance of data visualization, and that\'s why we\'re integrating charts to provide users with meaningful insights and help them make informed decisions.',
             },
             {
                 id: 4,
                 details:
-                    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+                    'Streamlining data management is a priority in our project. We\'re dedicated to organizing data systematically and ensuring its accuracy. Furthermore, we\'re incorporating interactive charts to empower users with the ability to explore and interpret data effortlessly, making data management a breeze.',
             },
-        ],
+        ],        
         SocialSharingHeading: 'Share This',
         SocialSharing: [
             {
@@ -130,24 +124,9 @@ export const Italos = {
         title: 'Related Projects',
         Projects: [
             {
-                id: 1,
-                title: 'Mobile UI',
-                img: Image4,
-            },
-            {
-                id: 2,
+                id: 0,
                 title: 'Web Application',
-                img: Image5,
-            },
-            {
-                id: 3,
-                title: 'UI Design',
-                img: Image6,
-            },
-            {
-                id: 4,
-                title: 'Kabul Mobile App UI',
-                img: Image3,
+                img: Socialite,
             },
         ],
     },

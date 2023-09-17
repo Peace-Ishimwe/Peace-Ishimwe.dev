@@ -72,24 +72,20 @@ export const Socialite = 	{
         ProjectDetails: [
             {
                 id: 1,
-                details:
-                    'Prop ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+                details: 'Socialite is a cutting-edge social media platform that brings people together like never before. With a sleek and intuitive interface, it empowers users to share their life experiences, connect with friends and family, and discover new horizons. Whether you want to post captivating photos, engaging videos, or thought-provoking status updates, Socialite has you covered. Stay in the loop with real-time notifications and explore trending topics in a vibrant community of users. Join us today and experience the future of social networking.',
             },
             {
                 id: 2,
-                details:
-                    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+                details: 'At the heart of Socialite is a mission to foster meaningful connections. We understand that social media can sometimes be overwhelming, so we prioritize user privacy and safety. Our platform allows you to tailor your feed to your interests, follow influencers you admire, and engage in meaningful conversations. With end-to-end encryption for messages and robust content moderation, Socialite is committed to providing a secure environment for everyone.',
             },
             {
                 id: 3,
-                details:
-                    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+                details: 'In addition to personal profiles, Socialite offers a powerful set of tools for businesses and creators. Seamlessly switch between your personal and professional personas. Whether you run a small business, host webinars, or showcase your art, our platform provides the tools you need to succeed. Expand your reach and build a loyal audience with Socialite Pages, analytics, and advertising options.',
             },
             {
                 id: 4,
-                details:
-                    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-            },
+                details: 'Socialite isn\'t just a platform; it\'s a movement. We believe in using technology to bring people closer together and enrich lives. With a global user base and a commitment to diversity and inclusion, we celebrate the unique perspectives and cultures of our community members. Join us on a journey of discovery, expression, and connection. Download the Socialite app or visit our website today to start your social media adventure.',
+            }
         ],
         SocialSharingHeading: 'Share This',
         SocialSharing: [
