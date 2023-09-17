@@ -22,7 +22,13 @@ const ProjectGallery = () => {
 					</div>
 				);
 			})}
-
+			<FacebookShareButton
+				url={'https://peace-ishimwe.vercel.app/projects/single-project/0'}
+				quote={'Title or jo bhi aapko likhna ho'}
+				hashtag={'#portfolio...'}
+			>
+				<FacebookIcon size={40} round={true} />
+			</FacebookShareButton>
 		</div>
 	);
 };
