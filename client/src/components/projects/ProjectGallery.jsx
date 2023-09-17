@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
 import { useParams } from 'react-router-dom';
+import { FacebookIcon, FacebookShareButton } from 'react-share';
 
 const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
