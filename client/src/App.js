@@ -13,6 +13,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 const Resume = lazy(() => import('./pages/Resume.jsx'));
+const ErrorPage = lazy(() => import('./pages/ErrorPage'));
 
 
 function App() {
@@ -27,13 +28,14 @@ function App() {
 							<Route path="/" element={<Home />} />
 							<Route path="/projects" element={<Projects />} />
 							<Route
-								path="/projects/single-project"
+								path="/projects/single-project/:id"
 								element={<ProjectSingle />}
 							/>
 
 							<Route path="/about" element={<About />} />
 							<Route path="/contact" element={<Contact />} />
 							<Route path="/resume" element={<Resume />} />
+							<Route path="*" element={<ErrorPage />} />
 						</Routes>
 					</Suspense>
 					<AppFooter />
