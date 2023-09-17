@@ -22,7 +22,6 @@ const ProjectGallery = () => {
 					</div>
 				);
 			})}
-
 		</div>
 	);
 };
