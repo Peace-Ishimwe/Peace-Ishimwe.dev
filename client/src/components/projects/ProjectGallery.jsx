@@ -22,6 +22,7 @@ const ProjectGallery = () => {
 					</div>
 				);
 			})}
+
 		</div>
 	);
 };
