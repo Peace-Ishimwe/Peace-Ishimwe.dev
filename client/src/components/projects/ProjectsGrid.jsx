@@ -30,6 +30,8 @@ const ProjectsGrid = () => {
 				<div
 					className="
                         flex
+						flex-col
+						md:flex-row
                         justify-between
                         border-b border-primary-light
                         dark:border-secondary-dark
@@ -80,7 +82,6 @@ const ProjectsGrid = () => {
 							aria-label="Name"
 						/>
 					</div>
-
 					<ProjectsFilter setSelectProject={setSelectProject} />
 				</div>
 			</div>

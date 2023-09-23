@@ -44,7 +44,7 @@ const AppFooter = () => {
 					<p className="text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-5">
 						Follow me
 					</p>
-					<ul className="flex gap-4 sm:gap-8">
+					<ul className="flex gap-3 sm:gap-8">
 						{socialLinks.map((link) => (
 							<a
 								href={link.url}

@@ -14,7 +14,7 @@ const Home = () => {
 			<Doings />
 
 			<ProjectsProvider>
-				<ProjectsGrid></ProjectsGrid>
+				<ProjectsGrid />
 			</ProjectsProvider>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">
