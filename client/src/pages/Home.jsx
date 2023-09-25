@@ -16,7 +16,6 @@ const Home = () => {
 			<ProjectsProvider>
 				<ProjectsGrid />
 			</ProjectsProvider>
-
 			<div className="mt-8 sm:mt-10 flex justify-center">
 				<Link
 					to="/projects"
