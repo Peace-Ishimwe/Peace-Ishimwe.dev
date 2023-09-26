@@ -1,4 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
@@ -13,14 +14,13 @@ const CanvasLoader = () => {
         flexDirection: "column",
       }}
     >
-      <span className='canvas-loader'></span>
+      <CircularProgress />
       <p
         style={{
           fontSize: 14,
-          color: "#F1F1F1",
           fontWeight: 800,
-          marginTop: 40,
         }}
+        className="text-ternary-dark dark:text-ternary-light mt-1"
       >
         {progress.toFixed(2)}%
       </p>
