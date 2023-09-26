@@ -63,7 +63,7 @@ const AppBanner = () => {
 			<motion.div
 				initial={{ opacity: 0, y: -180 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ ease: 'easeInOut', duration: 2, delay:  }}
+				transition={{ ease: 'easeInOut', duration: 2, delay: 1 }}
 				className="w-full h-[15rem] md:h-[30rem] float-right mt-8 sm:mt-0"
 			>
 				<ComputersCanvas />
