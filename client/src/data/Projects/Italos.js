@@ -1,4 +1,5 @@
 import Socialite from '../../images/Socialite/Socialite.jpg'
+import BigincEcommerce from '../../images/biginc-ecommerce/Biginc.png'
 import italos1 from '../../images/Italos/italos1.png'
 import italos2 from '../../images/Italos/italos2.png'
 import italos3 from '../../images/Italos/italos3.png'
@@ -168,6 +169,12 @@ export const Italos = {
                 title: 'Web Application',
                 img: Socialite,
             },
+            {
+              id: 2,
+              title: 'Online shipping ecommerce system',
+              category: 'Web Application',
+              img: BigincEcommerce,
+            }
         ],
     },
 }	
