@@ -24,42 +24,48 @@ import Profile10 from "../../images/ProfileMe/Profile10.jpg";
 
 
 const MyGallery = () => {
-  return (
-    <div className="gallery-container container mt-20">
-      <LightGallery plugins={[lgThumbnail, lgZoom, lgRotate, lgShare]} speed={500}>
-        <a href={Profile1}>
-          <img src={Profile1} alt="Profile 1" />
-        </a>
-        <a href={Profile3}>
-          <img src={Profile3} alt="Profile 3" />
-        </a>
-        <a href={Profile5}>
-          <img src={Profile5} alt="Profile 5" />
-        </a>
-        <a href={Profile6}>
-          <img src={Profile6} alt="Profile 6" />
-        </a>
-        <a href={Profile2}>
-          <img src={Profile2} alt="Profile 2" />
-        </a>
-        <a href={Profile7}>
-          <img src={Profile7} alt="Profile 7" />
-        </a>
-        <a href={Profile8}>
-          <img src={Profile8} alt="Profile 8" />
-        </a>
-        <a href={Profile9}>
-          <img src={Profile9} alt="Profile 9" />
-        </a>
-        <a href={Profile4}>
-          <img src={Profile4} alt="Profile 4" />
-        </a>
-        <a href={Profile10}>
-          <img src={Profile10} alt="Profile 10" />
-        </a>
-      </LightGallery>
-    </div>
-  );
+    return (
+        <div className="gallery-container container mt-20 mx-auto">
+            <div className="header">
+                <p className="font-general-medium text-2xl sm:text-4xl text-ternary-dark dark:text-ternary-light text-center mb-10">
+                    My Gallery
+                </p>
+            </div>
+            <LightGallery plugins={[lgThumbnail, lgZoom, lgRotate, lgShare]} speed={500}>
+                <a href={Profile1} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile1} alt="Profile 1" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile3} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile3} alt="Profile 3" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile5} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile5} alt="Profile 5" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile6} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile6} alt="Profile 6" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile4} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile4} alt="Profile 4" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile7} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile7} alt="Profile 7" className="w-full h-full object-cover" />
+                </a>
+
+                <a href={Profile8} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile8} alt="Profile 8" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile9} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile9} alt="Profile 9" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile2} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile2} alt="Profile 2" className="w-full h-full object-cover" />
+                </a>
+                <a href={Profile10} className="w-[16rem] max-w-[20rem] flex-grow">
+                    <img src={Profile10} alt="Profile 10" className="w-full h-full object-cover" />
+                </a>
+            </LightGallery>
+        </div>
+    );
 };
 
 export default MyGallery;

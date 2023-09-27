@@ -279,18 +279,6 @@ body {
 	  }
   }
 
-  .lg-react-element {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with minimum column width of 200px */
-	gap: 10px; /* Adjust the gap between images as needed */
-  }
-  
-  .lg-react-element a {
-	display: block;
-	overflow: hidden;
-  }
-  
-  .lg-react-element img {
-	width: 100%;
-	height: auto; /* Maintain aspect ratio */
+  .lg-react-element{
+	@apply flex flex-wrap justify-center lg:justify-start w-full gap-[1rem]
   }
