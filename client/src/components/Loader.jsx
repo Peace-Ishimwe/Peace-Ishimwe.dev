@@ -1,6 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
 import CircularProgress from '@mui/material/CircularProgress';
-import Typography from '@mui/material/Typography';
 
 const CanvasLoader = () => {
   const { progress } = useProgress();

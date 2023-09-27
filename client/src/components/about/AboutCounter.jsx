@@ -1,11 +1,32 @@
 import { useCountUp } from 'react-countup';
 import CounterItem from './CounterItem';
+import { useEffect, useState } from 'react';
 
 const AboutCounter = () => {
-	useCountUp({ ref: 'experienceCounter', end: 12, duration: 2 });
-	useCountUp({ ref: 'githubStarsCounter', end: 20, duration: 2 });
-	useCountUp({ ref: 'feedbackCounter', end: 92, duration: 2 });
-	useCountUp({ ref: 'projectsCounter', end: 77, duration: 2 });
+	const [githubRepos, setGithubRepos] = useState([]);
+	console.log(githubRepos);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch("https://api.github.com/users/peace-ishimwe/repos");
+				if (!response.ok) {
+					throw new Error("Network response was not ok");
+				}
+				const data = await response.json();
+				setGithubRepos(data);
+			} catch (error) {
+				console.error("Error fetching GitHub repos:", error);
+			}
+		};
+		fetchData();
+	}, []);
+
+	
+	useCountUp({ ref: 'experienceCounter', end: 3, duration: 3 });
+	useCountUp({ ref: 'githubProjectsCounter', end: 28, duration: 3 });
+	useCountUp({ ref: 'feedbackCounter', end: 92, duration: 3 });
+	useCountUp({ ref: 'projectsCounter', end: 87, duration: 3 });
 
 	return (
 		<div className="mt-10 sm:mt-20 bg-primary-light dark:bg-ternary-dark shadow-sm">
@@ -16,11 +37,12 @@ const AboutCounter = () => {
 					measurement=""
 				/>
 
-				<CounterItem
-					title="Stars on GitHub"
-					counter={<span id="githubStarsCounter" />}
-					measurement="k+"
+					<CounterItem
+					title="Projects on GitHub"
+					counter={<span id="githubProjectsCounter" />}
+					measurement="+"
 				/>
+
 
 				<CounterItem
 					title="Positive feedback"

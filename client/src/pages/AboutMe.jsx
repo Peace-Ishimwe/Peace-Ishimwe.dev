@@ -3,6 +3,7 @@ import AboutCounter from '../components/about/AboutCounter';
 import AboutClients from '../components/about/AboutClients';
 import { AboutMeProvider } from '../context/AboutMeContext';
 import { motion } from 'framer-motion';
+import MyGallery from '../components/gallery/MyGallery';
 
 const About = () => {
 	return (
@@ -25,6 +26,8 @@ const About = () => {
 				<AboutCounter />
 			</motion.div>
 
+			<MyGallery />
+			
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, delay: 1 }}
