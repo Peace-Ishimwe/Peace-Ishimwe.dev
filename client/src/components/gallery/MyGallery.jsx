@@ -4,7 +4,6 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgShare from 'lightgallery/plugins/share';
 import lgRotate from 'lightgallery/plugins/rotate';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -27,12 +26,7 @@ const MyGallery = () => {
                 {MyImages && MyImages.map((image) => {
                     return (
                         <a key={image.id} href={image.image} className="w-[16rem] max-w-[20rem] flex-grow">
-                            <LazyLoadImage
-                                alt={"image"}
-                                className="w-full h-full object-cover"
-                                src={image.image}
-                                loading='lazy'
-                            />
+                            <img src={image.image} loading='lazy' alt="Profile 1" className="w-full h-full object-cover" />
                         </a>
                     )
                 })}
