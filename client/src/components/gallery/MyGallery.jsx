@@ -33,35 +33,35 @@ const MyGallery = () => {
             </div>
             <LightGallery plugins={[lgThumbnail, lgZoom, lgRotate, lgShare]} speed={500}>
                 <a href={Profile1} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile1} alt="Profile 1" className="w-full h-full object-cover" />
+                    <img src={Profile1} loading='lazy' alt="Profile 1" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile3} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile3} alt="Profile 3" className="w-full h-full object-cover" />
+                    <img src={Profile3} loading='lazy' alt="Profile 3" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile5} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile5} alt="Profile 5" className="w-full h-full object-cover" />
+                    <img src={Profile5} loading='lazy' alt="Profile 5" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile6} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile6} alt="Profile 6" className="w-full h-full object-cover" />
+                    <img src={Profile6} loading='lazy' alt="Profile 6" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile4} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile4} alt="Profile 4" className="w-full h-full object-cover" />
+                    <img src={Profile4} loading='lazy' alt="Profile 4" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile7} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile7} alt="Profile 7" className="w-full h-full object-cover" />
+                    <img src={Profile7} loading='lazy' alt="Profile 7" className="w-full h-full object-cover" />
                 </a>
 
                 <a href={Profile8} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile8} alt="Profile 8" className="w-full h-full object-cover" />
+                    <img src={Profile8} loading='lazy' alt="Profile 8" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile9} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile9} alt="Profile 9" className="w-full h-full object-cover" />
+                    <img src={Profile9} loading='lazy' alt="Profile 9" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile2} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile2} alt="Profile 2" className="w-full h-full object-cover" />
+                    <img src={Profile2} loading='lazy' alt="Profile 2" className="w-full h-full object-cover" />
                 </a>
                 <a href={Profile10} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile10} alt="Profile 10" className="w-full h-full object-cover" />
+                    <img src={Profile10} loading='lazy' alt="Profile 10" className="w-full h-full object-cover" />
                 </a>
             </LightGallery>
         </div>
