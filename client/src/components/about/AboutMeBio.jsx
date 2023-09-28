@@ -12,7 +12,7 @@ const AboutMeBio = () => {
 			<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<LazyLoadImage
 					alt={"profile"}
-					effect="blur"
+					effect="opacity"
 					className="rounded-lg w-96"
 					src={profileImage} />
 			</div>

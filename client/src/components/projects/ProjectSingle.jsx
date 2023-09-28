@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ProjectSingle = ({ title, category, image , id }) => {
 	return (
@@ -15,10 +17,11 @@ const ProjectSingle = ({ title, category, image , id }) => {
 			<Link to={`/projects/single-project/${id}`} aria-label="Single Project">
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
 					<div>
-						<img
+						<LazyLoadImage
 							src={image}
 							className="rounded-t-xl border-none"
 							alt="Single Project"
+							effect='opacity'
 						/>
 					</div>
 					<div className="text-center px-4 py-6">
