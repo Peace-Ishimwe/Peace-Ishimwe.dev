@@ -1,5 +1,5 @@
 import { Html, useProgress } from "@react-three/drei";
-import CircularProgress from '@mui/material/CircularProgress';
+import LoaderSvg from "../images/Loader/loader.svg"
 
 const CanvasLoader = () => {
   const { progress } = useProgress();
@@ -14,7 +14,7 @@ const CanvasLoader = () => {
         flexDirection: "column",
       }}
     >
-      <CircularProgress />
+    <img src={LoaderSvg} alt="loader" />
       <p
         style={{
           fontSize: 14,
