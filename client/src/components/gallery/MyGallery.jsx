@@ -4,6 +4,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgShare from 'lightgallery/plugins/share';
 import lgRotate from 'lightgallery/plugins/rotate';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -11,16 +12,7 @@ import 'lightgallery/css/lg-thumbnail.css';
 import 'lightgallery/css/lg-share.css';
 import 'lightgallery/css/lg-rotate.css';
 
-import Profile1 from "../../images/ProfileMe/Profile1.jpg";
-import Profile2 from "../../images/ProfileMe/Profile2.jpg";
-import Profile3 from "../../images/ProfileMe/Profile3.jpg";
-import Profile4 from "../../images/ProfileMe/Profile4.jpg";
-import Profile5 from "../../images/ProfileMe/Profile5.jpg";
-import Profile6 from "../../images/ProfileMe/Profile6.jpg";
-import Profile7 from "../../images/ProfileMe/Profile7.jpg";
-import Profile8 from "../../images/ProfileMe/Profile8.jpg";
-import Profile9 from "../../images/ProfileMe/Profile9.jpg";
-import Profile10 from "../../images/ProfileMe/Profile10.jpg";
+import { MyImages } from './images';
 
 
 const MyGallery = () => {
@@ -32,37 +24,18 @@ const MyGallery = () => {
                 </p>
             </div>
             <LightGallery plugins={[lgThumbnail, lgZoom, lgRotate, lgShare]} speed={500}>
-                <a href={Profile1} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile1} loading='lazy' alt="Profile 1" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile3} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile3} loading='lazy' alt="Profile 3" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile5} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile5} loading='lazy' alt="Profile 5" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile6} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile6} loading='lazy' alt="Profile 6" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile4} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile4} loading='lazy' alt="Profile 4" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile7} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile7} loading='lazy' alt="Profile 7" className="w-full h-full object-cover" />
-                </a>
-
-                <a href={Profile8} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile8} loading='lazy' alt="Profile 8" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile9} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile9} loading='lazy' alt="Profile 9" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile2} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile2} loading='lazy' alt="Profile 2" className="w-full h-full object-cover" />
-                </a>
-                <a href={Profile10} className="w-[16rem] max-w-[20rem] flex-grow">
-                    <img src={Profile10} loading='lazy' alt="Profile 10" className="w-full h-full object-cover" />
-                </a>
+                {MyImages && MyImages.map((image) => {
+                    return (
+                        <a key={image.id} href={image.image} className="w-[16rem] max-w-[20rem] flex-grow">
+                            <LazyLoadImage
+                                alt={"image"}
+                                className="w-full h-full object-cover"
+                                src={image.image}
+                                loading='lazy'
+                            />
+                        </a>
+                    )
+                })}
             </LightGallery>
         </div>
     );
