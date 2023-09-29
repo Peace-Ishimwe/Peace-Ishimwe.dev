@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
-import Loader from './components/loader/loader';
 import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,11 +19,12 @@ const ErrorPage = lazy(() => import('./pages/ErrorPage'));
 function App() {
 	return (
 		<AnimatePresence>
-			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
-				<Router>
-					<ScrollToTop />
-					<AppHeader />
-					<Suspense fallback={<Loader />}>
+			<Suspense fallback={""}>
+
+				<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
+					<Router>
+						<ScrollToTop />
+						<AppHeader />
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/projects" element={<Projects />} />
@@ -38,13 +38,12 @@ function App() {
 							<Route path="/resume" element={<Resume />} />
 							<Route path="*" element={<ErrorPage />} />
 						</Routes>
-					</Suspense>
-					<AppFooter />
-				</Router>
+						<AppFooter />
+					</Router>
 
-				<UseScrollToTop />
-
-			</div>
+					<UseScrollToTop />
+				</div>
+			</Suspense>
 
 		</AnimatePresence>
 	);
