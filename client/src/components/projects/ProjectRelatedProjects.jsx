@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link, useParams } from 'react-router-dom';
 
 const ProjectRelatedProjects = () => {
@@ -17,7 +18,14 @@ const ProjectRelatedProjects = () => {
 				{data.RelatedProject.Projects.map((project) => {
 					return (
 						<Link to={`/projects/single-project/${project.id}`} className='flex flex-col gap-[1rem]'>
-							<img
+							{/* <img
+								src={project.img}
+								className="rounded-xl cursor-pointer"
+								alt={project.title}
+								key={project.id}
+							/> */}
+							<LazyLoadImage
+								effect="blur"
 								src={project.img}
 								className="rounded-xl cursor-pointer"
 								alt={project.title}

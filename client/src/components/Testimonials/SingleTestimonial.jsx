@@ -1,5 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const SingleTestimonial = ({ image, reviewAlt, details, name, position, rating }) => {
   const stars = Array.from({ length: rating }, (_, i) => (
@@ -10,7 +12,12 @@ const SingleTestimonial = ({ image, reviewAlt, details, name, position, rating }
     <div className="md:max-w-sm w-full lg:max-w-full rounded-lg overflow-hidden lg:flex dark:bg-ternary-dark bg-white shadow-lg hover:shadow-xl">
       <div className="border-gray-400 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
         <div className="flex items-center">
-          <img className="w-12 h-12 rounded-full mr-4" src={image} alt={name} />
+          {/* <img className="w-12 h-12 rounded-full mr-4" src={image} alt={name} /> */}
+          <LazyLoadImage
+            alt={name}
+            effect="blur"
+            className="w-12 h-12 rounded-full mr-4"
+            src={image} />
           <div className="text-sm">
             <p className="text-gray-900 dark:text-gray-200 leading-none text-base font-semibold">
               {name}

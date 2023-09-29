@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
 import { useParams } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
@@ -12,11 +14,17 @@ const ProjectGallery = () => {
 			{data.ProjectImages.map((project) => {
 				return (
 					<div className="mb-10 sm:mb-0" key={project.id}>
-						<img
+						{/* <img
 							src={project.img}
 							className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
 							alt={project.title}
 							key={project.id}
+						/> */}
+						<LazyLoadImage
+							alt={project.title}
+							effect="blur"
+							className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+							src={project.img}
 						/>
 					</div>
 				);

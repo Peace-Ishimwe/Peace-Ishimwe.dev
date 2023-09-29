@@ -1,4 +1,5 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import your icons
 import IconWeb from '../../images/Doings/icon-dev.svg';
@@ -43,11 +44,18 @@ const Doings = () => {
             className="service-item bg-secondary-light dark:bg-ternary-dark !shadow-lg hover:!shadow-xl flex gap-[2rem]"
           >
             <div className="service-icon-box">
-              <img
+              {/* <img
                 src={service.icon}
                 alt={`${service.title} icon`}
                 width="40"
                 className="min-w-[40px]"
+              /> */}
+              <LazyLoadImage
+                src={service.icon}
+                effect="blur"
+                width="40"
+                className="min-w-[40px]"
+                alt={`${service.title} icon`}
               />
             </div>
             <div className="service-content-box !text-start">

@@ -6,6 +6,7 @@ import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
 import Loader from './components/loader/loader';
 import './css/App.css';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import UseScrollToTop from './hooks/useScrollToTop';
 import 'react-toastify/dist/ReactToastify.css';
 const About = lazy(() => import('./pages/AboutMe'));
