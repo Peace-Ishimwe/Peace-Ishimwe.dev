@@ -3,7 +3,7 @@ import LoaderSvg from '../../images/Loader/loader.svg'
 
 const Loader = () => {
   return (
-    <div className='h-[100vh] bg-secondary-light dark:bg-primary-dark transition duration-300 flex items-center justify-center'>
+    <div className='h-[60vh] bg-secondary-light dark:bg-primary-dark flex items-center justify-center'>
         <img src={LoaderSvg} alt="loader" />
     </div>
   )

@@ -21,10 +21,10 @@ function App() {
 	return (
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
-				<Suspense fallback={<Loader />}>
-					<Router>
-						<ScrollToTop />
-						<AppHeader />
+				<Router>
+					<ScrollToTop />
+					<AppHeader />
+					<Suspense fallback={<Loader />}>
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/projects" element={<Projects />} />
@@ -38,10 +38,11 @@ function App() {
 							<Route path="/resume" element={<Resume />} />
 							<Route path="*" element={<ErrorPage />} />
 						</Routes>
-						<AppFooter />
-					</Router>
-					<UseScrollToTop />
-				</Suspense>
+					</Suspense>
+					<AppFooter />
+				</Router>
+
+				<UseScrollToTop />
 
 			</div>
 
