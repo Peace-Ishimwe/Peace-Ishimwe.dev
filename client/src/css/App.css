@@ -282,7 +282,3 @@ body {
   .lg-react-element{
 	@apply flex flex-wrap justify-center lg:justify-start w-full gap-[1rem]
   }
-
-  .lazy-load-image-background{
-	@apply rounded-xl mb-10 sm:mb-0 hover:shadow-lg bg-secondary-light dark:bg-ternary-dark animate-pulse
-  }

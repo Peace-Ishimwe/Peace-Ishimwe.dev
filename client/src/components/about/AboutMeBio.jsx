@@ -1,8 +1,7 @@
 import profileImage from '../../images/ProfileMe/Profile7.jpg';
 import { useContext } from 'react';
 import AboutMeContext from '../../context/AboutMeContext';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 const AboutMeBio = () => {
 	const { aboutMe } = useContext(AboutMeContext);
@@ -10,11 +9,7 @@ const AboutMeBio = () => {
 	return (
 		<div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 			<div className="w-full sm:w-1/4 mb-7 sm:mb-0">
-				<LazyLoadImage
-					alt={"profile"}
-					effect="opacity"
-					className="rounded-lg w-96"
-					src={profileImage} />
+				<img src={profileImage} className="rounded-lg w-96" alt="" />
 			</div>
 
 			<div className="font-general-regular w-full sm:w-3/4 text-left">
