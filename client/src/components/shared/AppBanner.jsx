@@ -1,7 +1,8 @@
 import { FiArrowDownCircle } from 'react-icons/fi';
 // import DeveloperHome from '../../images/developer-home.svg';
 import { motion } from 'framer-motion';
-import { ComputersCanvas } from '../canvas';
+import { lazy } from 'react';
+const ComputersCanvas = lazy(()=> import('../canvas/Computers') )
 
 const AppBanner = () => {
 
