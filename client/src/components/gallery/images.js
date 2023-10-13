@@ -1,12 +1,12 @@
 import Profile1 from "../../images/ProfileMe/Profile1.jpg";
 import Profile2 from "../../images/ProfileMe/Profile2.jpg";
-import Profile5 from "../../images/ProfileMe/Profile3.jpg";
-import Profile9 from "../../images/ProfileMe/Profile4.jpg";
+import Profile3 from "../../images/ProfileMe/Profile3.jpg";
+import Profile4 from "../../images/ProfileMe/Profile4.jpg";
 import Profile5 from "../../images/ProfileMe/Profile5.jpg";
-import Profile3 from "../../images/ProfileMe/Profile6.jpg";
+import Profile6 from "../../images/ProfileMe/Profile6.jpg";
 import Profile7 from "../../images/ProfileMe/Profile7.jpg";
 import Profile8 from "../../images/ProfileMe/Profile8.jpg";
-import Profile4 from "../../images/ProfileMe/Profile9.jpg";
+import Profile9 from "../../images/ProfileMe/Profile9.jpg";
 import Profile10 from "../../images/ProfileMe/Profile10.jpg";
 
 
