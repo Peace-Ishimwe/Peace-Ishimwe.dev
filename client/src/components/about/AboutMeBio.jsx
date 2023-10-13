@@ -21,7 +21,7 @@ const AboutMeBio = () => {
                 {imageLoaded ? (
                     <img src={profileImage} className="rounded-lg w-96" alt="Profile" />
                 ) : (
-                    <Skeleton variant="rect" width={384} height={512} animation="wave" />
+                    <Skeleton variant="rect" className='w-96 h-full rounded-lg' animation="wave" />
                 )}
             </div>
 
