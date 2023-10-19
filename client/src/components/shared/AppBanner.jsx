@@ -1,5 +1,4 @@
 import { FiArrowDownCircle } from 'react-icons/fi';
-import DeveloperHome from '../../images/developer-home.svg';
 import { motion } from 'framer-motion';
 
 const AppBanner = () => {
@@ -34,7 +33,7 @@ const AppBanner = () => {
 					}}
 					className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center lg:text-left leading-normal text-gray-500 dark:text-gray-200"
 				>
-					 A Highly Skilled And Motivated Fullstack Developer
+					A Highly Skilled And Motivated Fullstack Developer
 				</motion.p>
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -65,7 +64,7 @@ const AppBanner = () => {
 				transition={{ ease: 'easeInOut', duration: 2, delay: 1 }}
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
-			<img src={DeveloperHome} alt="" />
+				<iframe title='myImage' className="w-full h-[85vh]" src="https://lottie.host/?file=52c13359-7f32-481a-957e-718c4bc908db/QseUXflKzQ.json"></iframe>
 			</motion.div>
 		</motion.section>
 	);
