@@ -17,17 +17,17 @@ export const ProjectsProvider = (props) => {
 			.includes(searchProject.toLowerCase())
 			? item
 			: searchProject === ''
-			? item
-			: '';
+				? item
+				: '';
 		return result;
 	});
 
-// Select projects by project category
-const selectProjectsByCategory = projects.filter((item) => {
-  let category =
-    item.category.charAt(0).toUpperCase() + item.category.slice(1);
-  return selectProject ? category.includes(selectProject) : false;
-});
+	// Select projects by project category
+	const selectProjectsByCategory = projects.filter((item) => {
+		let category =
+			item.category.charAt(0).toUpperCase() + item.category.slice(1);
+		return selectProject ? category.includes(selectProject) : false;
+	});
 
 
 	return (
